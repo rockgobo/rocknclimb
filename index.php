@@ -134,18 +134,11 @@
             
 	    </div><!-- /header -->
         <div data-role="navbar" data-theme="b" data-bind="visible: !printMode()">
-	        <ul data-bind="visible: CanEditBoulder()">
-		        <li><a class="ui-btn-active ui-state-persist" data-bind="click: changeToSelectionMode" data-icon="home">Auswahl</a></li>
-		        <li><a data-bind="click: changeToEditMode" data-icon="gear">Bearbeiten</a></li>
-                <li><a data-bind="click: changeToHighscoreMode" data-icon="star">Highscore</a></li>
-                <li><a data-bind="click: changeToGridMode" data-icon="grid">Übersicht</a></li>
-	        </ul>
-                
-            <ul data-bind="visible: !CanEditBoulder()">
+            <ul>
 		        <li><a class="ui-btn-active ui-state-persist" data-bind="click: changeToSelectionMode" data-icon="home">Auswahl</a></li>
                 <li><a data-bind="click: changeToHighscoreMode" data-icon="star">Highscore</a></li>
                 <li><a data-bind="click: changeToGridMode" data-icon="grid">Übersicht</a></li>
-	        </ul>
+            </ul>
         </div>
         <!-- /navbar -->
         
@@ -227,9 +220,11 @@
                     </div>
                     <!-- /ko -->
             </div>
+            
+            <!-- IMAGE CANVAS -->
             <div data-bind="visible:  !profileMode() && !highscoreMode() && !gridMode() && !newsMode()">
-                <div id="canvas_image">
-                    <div class="image-annotate-canvas" data-bind="style: {backgroundImage: currentWallImage}, click: imageClicked" style="width:100%; height:100%">
+                <div id="canvas_image" class="canvas">
+                    <div class="image-annotate-canvas shadow" data-bind="style: {backgroundImage: currentWallImage}, click: imageClicked" style="width:100%; height:100%; margin-left: auto; margin-right: auto">
                         <div class="image-annotate-view">   
                         <!-- ko if: userLoggedin() && !printMode() -->
                         <div data-bind="css: {boulder_finished: currentBoulder()?currentBoulder().Completed():false, boulder_unfinished: currentBoulder()?!currentBoulder().Completed():true },click: completeBoulder" id="boulder_status" title="Boulder finished!">
@@ -291,10 +286,12 @@
                         <div data-bind="visible: !$root.printMode()" style="position: absolute; bottom: 5px; right: 5px;">
                             <div data-role="button" data-mini="true" data-inline="true" data-bind="click: $root.changeWallRight, visible: $root.currentWall()?($root.currentWall().Right > 0):false">Nach Rechts</div>
                         </div>
+                        
                     </div>
 
+                </div>
                     
-                    <div id="canvas_wrapper">
+                    <div id="canvas_wrapper" class="canvas">
                     <!-- ko with: currentBoulder -->
                         <div id="canvas_boulder_comments">
                             <h3 style="margin-top:0px;">Bewertungen:</h3>
@@ -381,6 +378,7 @@
                                 </table>
                             </div>
                         </div><!-- /canvas_boulder_comments -->
+                        
                         <!-- /ko -->
                         <div id="canvas_boulder_description">
                             <!-- ko with: currentBoulder -->
@@ -415,9 +413,9 @@
                     
                         
                     </div><!-- /canvas_wrapper -->
-                </div>
             </div>
-        </div> 
+            <a type="button" data-bind="click: $root.changeToEditMode, visible: $root.CanEditBoulder" data-icon="gear">Bearbeiten</a>
+        </div> <!-- /VIEW BOULDER -->
         
         <!-- VIEW PROFILE -->
         <div data-bind="visible: profileMode" class="canvas_profile">
@@ -680,12 +678,13 @@
         
         <!-- FOOTER -->
         <div data-role="footer"  data-bind="visible: !printMode()">
-            <div data-bind="with: stats" class="annotation" style="margin: 10px;">
-                <a type="button" data-bind="click: $root.newBoulder" data-mini="true" data-inline="true" >Neuen Boulder erstellen</a>
-                <a type="button" data-bind="click: $root.changeToPrintMode" data-mini="true" data-inline="true">Druckansicht</a>
+            <div class="annotation" style="margin: 10px;">
+                <a type="button" data-bind="click: newBoulder" data-mini="true" data-inline="true" >Neuen Boulder erstellen</a>
+                <a type="button" data-bind="click: changeToPrintMode" data-mini="true" data-inline="true">Druckansicht</a>
                 <a href="http://board.rocknclimb.de/viewforum.php?f=3" target="_blank" data-inline="true" data-mini="true" data-role="button">Forum</a>
                 <a href="#popup_impressum" data-rel="popup" data-inline="true" data-mini="true" data-role="button" data-position-to="window" data-transition="fade">Impressum</a>
-                <div style="float: right;">
+                
+                <div style="float: right;" data-bind="with: stats">
                     Anzahl der Boulder: <span data-bind="text: boulder_count"></span>, Anzahl der Nutzer: <span data-bind="text: user_count"></span>
                 </div>
             </div>

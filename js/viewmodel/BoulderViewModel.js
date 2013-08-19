@@ -23,8 +23,10 @@ function BoulderViewModel (app_id, wall_id_t, boulder_id_t)
     self.boulders = ko.observableArray(null);
     self.nodes = ko.observableArray(null);
 
-    var scale = Math.round((window.innerWidth / 2000) * 10) / 10; 
-    self.scale = ko.observable(scale?scale:0.6);
+    var scale = Math.round((window.innerWidth / 2000) * 10) / 10;
+    scale = scale > 0.5 ? 0.5 : scale;
+    self.scale = ko.observable(scale ? scale : 0.5);
+    
     self.image_width = ko.observable(200);
     self.image_height = ko.observable(200);
     self.offsetX = 0;
@@ -57,6 +59,8 @@ function BoulderViewModel (app_id, wall_id_t, boulder_id_t)
         self.newsMode(false);
     };
     self.changeToEditMode = function () {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        
         self.selectionMode(false);
         self.editMode(true);
         self.profileMode(false);
@@ -528,9 +532,7 @@ function BoulderViewModel (app_id, wall_id_t, boulder_id_t)
 
         $.get("newBoulder.php", function (data) {
             self.changeToEditMode();
-
-            $("html, body").animate({ scrollTop: 0 }, "slow");
-
+            
             var boulder = new Boulder(false, self.currentWall().Id, self.user());
             boulder.Name("Projekt " + data);
 
@@ -1275,7 +1277,10 @@ function Boulder(data, wall, user) {
             }
             
             viewmodel.editBoulderMode(false);
-        }).success(function () { alert("Boulder gespeichert") })
+        }).success(function () {
+            viewmodel.changeToSelectionMode();
+            alert("Boulder gespeichert");
+        })
             .error(function () { alert("Fehler beim speichern des Boulders"); })
             .complete(function () {
                 //HACK: refreshing JQuery mobile UI

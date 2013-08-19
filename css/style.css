@@ -1,0 +1,447 @@
+﻿.canvas_legend
+{
+    background-color: White;
+    padding: 10px;
+    clear: both;
+}
+
+#canvas_navigation
+{
+     padding: 20px;
+}
+
+#canvas_navigation select
+{
+    padding: 5px;
+}
+
+#canvas_navigation input
+{
+    padding: 5px;
+}
+.image-annotate-add{
+    position: fixed;
+    top: 80px;
+    left: 10px;
+    background-color: White;
+    padding: 10px;
+    clear: both;
+}
+
+#canvas_image
+{
+    width: 100%; 
+    height: 100%; 
+    vertical-align: middle;  
+    overflow: auto;
+}
+
+.image-annotate-canvas
+{
+    border-radius: 10px;
+}
+
+#toAnnotate
+{
+    vertical-align: middle;
+}
+
+.button_delete
+{
+    font-size: 10px;    
+}
+
+#boulder_status
+{
+    position: absolute; 
+    left: 0px; 
+    top: 40px; 
+    z-index: 1000; 
+    width: 48px;
+    height: 48px;
+}
+
+#boulder_facebook
+{
+    position: absolute; 
+    left: 0px; 
+    top: 90px; 
+    z-index: 1000;  
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#scale_selection
+{
+    position: absolute; 
+    left: 0px; 
+    top: 0px; 
+    z-index: 1000; 
+}
+
+.boulder_finished
+{
+    background-image: url('images/finished.png');
+}
+
+.boulder_unfinished
+{
+    background-image: url('images/unfinished.png');
+    cursor: pointer;  
+}
+.boulder_unfinished:hover
+{
+    background-color: #FFF; 
+}
+
+.canvas_comment
+{
+    border-radius: 10px;
+    border: 1px solid #CCC;
+    background-color: #FFF;
+    padding: 14px;
+    margin-bottom: 4px;    
+    font-size: 11pt;
+    /*clear: both;*/
+}
+
+.canvas_comments_averages
+{
+    margin-bottom: 20px;    
+}
+
+.canvas_new_comment
+{
+    border-radius: 10px;
+    border: 1px solid #CCC;
+    background-color: #666;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: #FFF;
+    width: 100%;
+}
+
+.canvas_profile
+{
+    padding: 10px;
+}
+
+.node_hightlighted
+{
+    background-color: #FFF;
+}
+
+.annotation
+{
+    padding: 5px;
+    font-size: 10pt;    
+}
+
+#popup_overview
+{
+    font-size: 10pt;    
+}
+
+.boulder_diff_0, .boulder_diff_0 a
+{
+    color: #FFF;    
+    text-decoration: none;
+}
+.boulder_diff_1, .boulder_diff_1 a
+{
+    color: #01DF01;    
+    text-decoration: none;
+}
+.boulder_diff_2, .boulder_diff_2 a
+{
+    color: #0101DF;     
+    text-shadow: 0 1px 0 #BBB; 
+    text-decoration: none;
+}
+.boulder_diff_3, .boulder_diff_3 a
+{
+    color: #FFFF00;   
+    text-decoration: none; 
+}
+.boulder_diff_4, .boulder_diff_4 a
+{
+    color: #FF8000;    
+    text-decoration: none;
+}
+.boulder_diff_5, .boulder_diff_5 a
+{
+    color: #FF0000;    
+    text-decoration: none;
+}
+
+.boulder_diff_bg
+{
+    border: 1px solid #CCC;
+    width: 20px;
+    margin: 2px;    
+}
+.boulder_diff_bg_0
+{
+    background-color: #FFF;    
+}
+.boulder_diff_bg_1
+{
+    background-color: #01DF01;    
+}
+.boulder_diff_bg_2
+{
+    background-color: #0101DF;  
+}
+.boulder_diff_bg_3
+{
+    background-color: #FFFF00;    
+}
+.boulder_diff_bg_4
+{
+    background-color: #FF8000;    
+}
+.boulder_diff_bg_5
+{
+    background-color: #FF0000;    
+}
+
+. social_link
+{
+    margin-left: 10px;    
+}
+
+.grid
+{
+    clear: both;
+    padding:10px;
+}
+
+.grid_wall
+{
+    background: linear-gradient(#00978D, #007C74) repeat scroll 0 0 #008A81;
+    background-color: #008A81;
+    color: #FFF;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #444;
+    padding: 10px;
+    clear:both;
+    border-radius: 10px;
+}
+
+.grid_legend
+{
+    margin-bottom: 10px;
+    font-size:8pt;
+}
+.grid_legend p
+{
+    margin-top: 0px;
+    margin-bottom: 2px;    
+}
+
+.grid_boulders
+{
+    font-size: 8pt;
+    text-shadow: 0 1px 0 #444;
+    clear: both;
+}
+.grid_boulders h1
+{
+    font-size: 10pt;
+    text-shadow: 0 1px 0 #444;
+}
+
+.grid_boulder
+{
+    float: left;
+    width: 175px;
+    height: 100px;
+    border-top: 1px solid #CCC;
+    background: linear-gradient(#959595, #7A7A7A) repeat scroll 0 0 #888888;
+    background-color: #888888;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+.grid_boulders .finished
+{
+    background: rgb(157,196,41); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzlkYzQyOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM4ZjllMjEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  rgba(157,196,41,1) 0%, rgba(143,158,33,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(157,196,41,1)), color-stop(100%,rgba(143,158,33,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(157,196,41,1) 0%,rgba(143,158,33,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(157,196,41,1) 0%,rgba(143,158,33,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(157,196,41,1) 0%,rgba(143,158,33,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(157,196,41,1) 0%,rgba(143,158,33,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dc429', endColorstr='#8f9e21',GradientType=0 ); /* IE6-8 */
+
+
+}
+.grid_boulder p
+{
+    margin-top: 0px;
+    margin-bottom:2px;
+}
+
+.highscore_me
+{
+    color: #CC0000;    
+}
+
+.news
+{
+    border: 1px solid #CCF;
+    background-color: #EEF;
+    font-size: 8pt;    
+    padding:2px;
+    margin:2px;
+    border-radius: 2px;
+}
+
+.link
+{
+    text-decoration: underline; 
+    cursor: pointer;
+}
+
+.award
+{ 
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid # CCC;
+    border-radius: 5px;
+    -moz-box-shadow: 4px 4px 2px #888;
+    -webkit-box-shadow: 4px 4px 2px #888;
+    box-shadow: 4px 4px 2px #888;
+      
+}
+
+.canvas_comment p
+{
+    display: inline;
+    margin: 0px;
+    position: relative;
+    top: -10px;
+}
+
+.canvas_edit
+{
+    background-color: #DDD;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px; 
+    margin-bottom: 10px;
+}
+
+#canvas_highscore
+{
+    padding: 10px;
+}
+
+#canvas_highscore li
+{
+    background-color: #DDD;   
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.award_failed
+{ 
+    opacity:0.5;
+    filter:alpha(opacity=50); /* For IE8 and earlier */  
+}
+
+.ui-content
+{
+    padding-top: 5px;    
+}
+
+.ui-icon-profile {background-image: url("images/profile.png");}
+
+.ui-icon-thermometer{background-image: url("images/93-thermometer.png");}
+.ui-icon-map {background-image: url("images/103-map.png");}
+.ui-icon-index {background-image: url("images/104-index-cards.png");}
+.ui-icon-beaker {background-image: url("images/91-beaker-2.png");}
+.ui-icon-pencil {background-image: url("images/187-pencil.png");}
+
+.canvas_new_comment select
+{
+    padding:4px;
+    border-radius: 10px;
+    font-size: 10pt;
+}
+.canvas_new_comment select option.main_diff
+{
+   font-weight:bold;
+}
+
+.canvas_loading
+{
+    width: 100%;
+    height: 100%;
+    text-align: center;    
+}
+
+@media screen and (min-width: 800px) 
+{
+   #canvas_boulder_description {
+    margin-right: 480px;
+  }
+  #canvas_boulder_comments {
+    float: right;
+    width: 450px;
+    margin-left: 10px;
+    border-left: 2px solid #FFF;
+    padding-left: 10px;
+  }
+  
+}
+
+#canvas_wrapper
+  {
+    margin-top: 10px;
+    /*min-width: 801px;*/  
+    background-color: #DDD;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .global_news
+  {
+    margin: 10px;
+    padding: 10px;  
+    color: White;
+    border-radius: 10px;  
+    text-shadow: 0 1px 0 #000000;
+  }
+  
+  .news_newboulder
+  {
+    background: linear-gradient(#D42A31, #AD2328) repeat scroll 0 0 #C1272D;
+    background-image:-webkit-linear-gradient(top, #D42A31, #AD2328);
+  }
+   .news_newboulder:hover
+  {
+    background:  #D1272D;
+  }
+  .news_newcompleted
+  {
+    background: linear-gradient(#959595, #7A7A7A) repeat scroll 0 0 #888888;
+    background-image:-webkit-linear-gradient(top, #959595, #7A7A7A);
+  }
+   .news_newcompleted:hover
+  {
+    background:  #999;
+  }
+  .global_news .date
+  {
+    padding-top: 0px;
+    font-size: 8pt;
+    float:right;
+    text-align: right;  
+  }

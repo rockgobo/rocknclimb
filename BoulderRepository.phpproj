@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>BoulderRepository</Name>
+    <ProjectGuid>{018873c1-5cb5-4621-9047-544f6c53972d}</ProjectGuid>
+    <RootNamespace>BoulderRepository</RootNamespace>
+    <OutputType>Library</OutputType>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="boulder.json" />
+    <Compile Include="boulder1.json" />
+    <Compile Include="delete.html" />
+    <Compile Include="demo-static.html" />
+    <Compile Include="get.php" />
+    <Compile Include="index.html" />
+    <Compile Include="info.php" />
+    <Compile Include="license.txt" />
+    <Compile Include="readme.md" />
+    <Compile Include="save.php" />
+    <Compile Include="css\annotation.css" />
+    <Compile Include="images\accept.png" />
+    <Compile Include="images\asterisk_yellow.png" />
+    <Compile Include="images\cross.png" />
+    <Compile Include="images\delete.png" />
+    <Compile Include="images\Right.jpg" />
+    <Compile Include="images\trafalgar-square-annotated.jpg" />
+    <Compile Include="js\jquery-1.7.1.js" />
+    <Compile Include="js\jquery-ui-1.8.17.js" />
+    <Compile Include="js\jquery.annotate.js" />
+    <Compile Include="PHPWebProjectBoulderrep\index.php" />
+    <Compile Include="PHPWebProjectBoulderrep\PHPWebProjectBoulderrep.phpproj" />
+    <Compile Include="PHPWebProjectBoulderrep\PHPWebProjectBoulderrep.sln" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="css" />
+    <Folder Include="images" />
+    <Folder Include="js" />
+    <Folder Include="PHPWebProjectBoulderrep" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\style.css">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+</Project>

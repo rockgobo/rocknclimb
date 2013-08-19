@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "BoulderRepository", "BoulderRepository.phpproj", "{018873C1-5CB5-4621-9047-544F6C53972D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{018873C1-5CB5-4621-9047-544F6C53972D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{018873C1-5CB5-4621-9047-544F6C53972D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{018873C1-5CB5-4621-9047-544F6C53972D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{018873C1-5CB5-4621-9047-544F6C53972D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
